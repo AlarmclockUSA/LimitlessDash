@@ -2,5 +2,22 @@
   "buildCommand": "next build",
   "ignoreCommand": "echo 'Ignoring ESLint errors during build'",
   "installCommand": "npm install",
-  "framework": "nextjs"
+  "framework": "nextjs",
+  "outputDirectory": ".next",
+  "regions": ["iad1"],
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/next"
+    }
+  ],
+  "env": {
+    "NEXT_PUBLIC_FIREBASE_API_KEY": "PLACEHOLDER",
+    "NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN": "PLACEHOLDER",
+    "NEXT_PUBLIC_FIREBASE_PROJECT_ID": "PLACEHOLDER",
+    "NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET": "PLACEHOLDER",
+    "NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID": "PLACEHOLDER",
+    "NEXT_PUBLIC_FIREBASE_APP_ID": "PLACEHOLDER",
+    "NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID": "PLACEHOLDER"
+  }
 } 
