@@ -96,7 +96,7 @@ const EmailModal: React.FC<EmailModalProps> = ({ onClose }) => {
               </svg>
             </div>
             <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-2">Thank You!</h2>
-            <p className="text-gray-600 dark:text-gray-300">You're all set to access the dashboard.</p>
+            <p className="text-gray-600 dark:text-gray-300">You&apos;re all set to access the dashboard.</p>
           </div>
         ) : (
           <>

@@ -45,7 +45,7 @@ const CountdownTimer = () => {
     }, 1000);
 
     return () => clearInterval(timer);
-  }, []); // Empty dependency array to run only once on mount
+  }, [calculateTimeLeft]); // Add calculateTimeLeft as a dependency
 
   // Format event time in user's local timezone
   const formatLocalTime = () => {

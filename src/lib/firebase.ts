@@ -6,13 +6,13 @@ import { getFirestore, enableIndexedDbPersistence, connectFirestoreEmulator } fr
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyCeX2bSm-4DcPyUtY3oKnvkWHTVjZUxMEc",
-  authDomain: "limitless-caa32.firebaseapp.com",
-  projectId: "limitless-caa32",
-  storageBucket: "limitless-caa32.appspot.com",
-  messagingSenderId: "735419408528",
-  appId: "1:735419408528:web:ee07b6a04d8f8489453815",
-  measurementId: "G-FRJC26LEYQ"
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+  measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID
 };
 
 // Initialize Firebase
@@ -33,10 +33,11 @@ if (typeof window !== 'undefined') {
       await enableIndexedDbPersistence(db);
       persistenceEnabled = true;
       console.log('Firestore persistence enabled');
-    } catch (err: any) {
-      if (err.code === 'failed-precondition') {
+    } catch (err: unknown) {
+      const error = err as { code?: string };
+      if (error.code === 'failed-precondition') {
         console.warn('Firestore persistence failed: multiple tabs open');
-      } else if (err.code === 'unimplemented') {
+      } else if (error.code === 'unimplemented') {
         console.warn('Firestore persistence not available in this browser');
       } else {
         console.error('Firestore persistence error:', err);
