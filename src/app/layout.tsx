@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Event Dashboard",
-  description: "A simple dashboard for your event with main stage access",
+  title: "Your Limitless Life with God - Event Dashboard",
+  description: "Dashboard for the 'Your Limitless Life with God' virtual event on March 7-8, 2025",
 };
 
 export default function RootLayout({
