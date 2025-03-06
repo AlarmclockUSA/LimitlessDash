@@ -12,7 +12,6 @@ const nextConfig = {
   },
   // Additional configuration for Vercel deployment
   // This ensures the build succeeds despite any linting or type errors
-  swcMinify: true,
   poweredByHeader: false,
 };
 
