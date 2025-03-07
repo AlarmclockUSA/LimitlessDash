@@ -255,7 +255,7 @@ export default function Home() {
             Your Limitless Life with God
           </h2>
           <p className="text-lg md:text-xl text-white/90 mb-8">
-            Join us on Friday, March 7th & Saturday, March 8th, 2025 for an inspiring event that will transform your relationship with God.
+            Join us on Friday, March 7th & Saturday, March 8th, 2025 from 10:00 AM - 11:30 AM PST for an inspiring event that will transform your relationship with God.
           </p>
           
           {/* Countdown Timer */}

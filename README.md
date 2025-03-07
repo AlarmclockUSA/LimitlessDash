@@ -1,6 +1,6 @@
 # Your Limitless Life with God - Dashboard
 
-Event dashboard for the "Your Limitless Life with God" virtual event on March 7-8, 2025.
+Event dashboard for the "Your Limitless Life with God" virtual event on March 7-8, 2025 from 10:00 AM - 11:30 AM PST each day.
 
 ## Features
 

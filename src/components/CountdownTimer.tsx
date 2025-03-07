@@ -10,9 +10,9 @@ interface TimeLeft {
 }
 
 const CountdownTimer = () => {
-  // Create a date for March 7, 2025 at 1:30 PM Eastern Time
-  // Using UTC and then adjusting for Eastern Time (UTC-5)
-  const eventDate = new Date(Date.UTC(2025, 2, 7, 18, 30, 0)); // March 7, 2025, 1:30 PM EST (18:30 UTC)
+  // Create a date for March 7, 2025 at 10:00 AM Pacific Time
+  // Using UTC and then adjusting for Pacific Time (UTC-8)
+  const eventDate = new Date(Date.UTC(2025, 2, 7, 18, 0, 0)); // March 7, 2025, 10:00 AM PST (18:00 UTC)
   const [timeLeft, setTimeLeft] = useState<TimeLeft>({});
   const [userTimeZone, setUserTimeZone] = useState("");
   
@@ -58,11 +58,11 @@ const CountdownTimer = () => {
       timeZoneName: 'short'
     };
     
-    // Using UTC and then adjusting for Eastern Time (UTC-5)
-    const day1Start = new Date(Date.UTC(2025, 2, 7, 18, 30, 0)); // March 7, 2025, 1:30 PM EST
-    const day1End = new Date(Date.UTC(2025, 2, 7, 19, 30, 0));   // March 7, 2025, 2:30 PM EST
-    const day2Start = new Date(Date.UTC(2025, 2, 8, 18, 30, 0)); // March 8, 2025, 1:30 PM EST
-    const day2End = new Date(Date.UTC(2025, 2, 8, 19, 30, 0));   // March 8, 2025, 2:30 PM EST
+    // Using UTC and then adjusting for Pacific Time (UTC-8)
+    const day1Start = new Date(Date.UTC(2025, 2, 7, 18, 0, 0));  // March 7, 2025, 10:00 AM PST
+    const day1End = new Date(Date.UTC(2025, 2, 7, 19, 30, 0));   // March 7, 2025, 11:30 AM PST
+    const day2Start = new Date(Date.UTC(2025, 2, 8, 18, 0, 0));  // March 8, 2025, 10:00 AM PST
+    const day2End = new Date(Date.UTC(2025, 2, 8, 19, 30, 0));   // March 8, 2025, 11:30 AM PST
     
     return {
       day1Start: day1Start.toLocaleString('en-US', options),
